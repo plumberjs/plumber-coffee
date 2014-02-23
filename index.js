@@ -39,6 +39,7 @@ module.exports = function(/* no options */) {
 
             return transpiledJs.withData(jsData, sourceMap);
         } catch(error) {
+            // FIXME: only catch compile errors
             // Catch and map error
             return new Report({
                 resource: resource,
