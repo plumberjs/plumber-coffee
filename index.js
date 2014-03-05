@@ -1,4 +1,4 @@
-var mapEachResource = require('plumber').mapEachResource;
+var operation = require('plumber').operation;
 var Report = require('plumber').Report;
 var SourceMap = require('mercator').SourceMap;
 
@@ -6,7 +6,7 @@ var coffee = require('coffee-script');
 
 
 module.exports = function(/* no options */) {
-    return mapEachResource(function(resource, supervisor) {
+    return operation.map(function(resource) {
         var transpiledJs = resource.withType('javascript');
         var resourcePath = resource.path() && resource.path().absolute();
         var coffeeData = resource.data();
