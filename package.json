@@ -4,7 +4,7 @@
   "description": "CoffeeScript operation for Plumber pipelines",
   "main": "index",
   "dependencies": {
-    "plumber": "~0.2.4",
+    "plumber": "git://github.com/plumberjs/plumber.git#highland",
     "mercator": "~0.1.4",
     "coffee-script": "~1.7.1"
   },
